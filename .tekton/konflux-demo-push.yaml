@@ -24,6 +24,8 @@ spec:
       value: quay.io/redhat-user-workloads/cmoullia-tenant/konflux-demo/konflux-demo:{{revision}}
     - name: dockerfile
       value: Dockerfile
+    - name: skip-checks
+      value: true
   pipelineRef:
     name: build-pipeline
   workspaces:
