@@ -5,16 +5,16 @@ metadata:
     pipelinesascode.tekton.dev/max-keep-runs: "3"
     pipelinesascode.tekton.dev/on-cel-expression: "event == 'push' && target_branch\
       \ == 'main'"
-    build.appstudio.openshift.io/repo: "https://github.com/konflux-ci/build-definitions.git?rev={{revision}}"
+    build.appstudio.openshift.io/repo: "https://github.com/paketo-community/builder-ubi-base?rev={{revision}}"
     build.appstudio.redhat.com/commit_sha: "{{revision}}"
     build.appstudio.redhat.com/target_branch: "{{target_branch}}"
   labels:
     pipelines.appstudio.openshift.io/type: "build"
     pipelines.openshift.io/used-by: "build-cloud"
-    pipelines.openshift.io/strategy: "configuration"
-    appstudio.openshift.io/component: "default-konflux"
-    appstudio.openshift.io/application: "default-konflux"
     pipelines.openshift.io/runtime: "java"
+    appstudio.openshift.io/component: "konflux-demo"
+    appstudio.openshift.io/application: "konflux-demo"
+    pipelines.openshift.io/strategy: "remote-build"
   name: "pack-build-builder-image-remote"
   namespace: "cmoullia-tenant"
 spec:
