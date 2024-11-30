@@ -142,7 +142,7 @@ spec:
         steps:
         - args:
           - "$(params.packCmdBuilderFlags)"
-          image: "registry.access.redhat.com/ubi9@sha256:1ee4d8c50d14d9c9e9229d9a039d793fcbc9aa803806d194c957a397cf1d2b17"
+          image: "registry.access.redhat.com/ubi9@sha256:1057dab827c782abcfb9bda0c3900c0966b5066e671d54976a7bcb3a2d1a5e53"
           name: "run-script"
           script: |
             #!/usr/bin/env bash
